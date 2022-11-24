@@ -14,6 +14,21 @@
             android:id="@+id/fragmentbanner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+        <androidx.fragment.app.FragmentContainerView
+            android:name="exam.lesson.myapplication.Fragment.Fragment_Playlist"
+            android:id="@+id/fragmentplaylist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <androidx.fragment.app.FragmentContainerView
+            android:name="exam.lesson.myapplication.Fragment.Fragment_Album_Hot"
+            android:id="@+id/framentalbum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <androidx.fragment.app.FragmentContainerView
+            android:name="exam.lesson.myapplication.Fragment.Fragment_ChuDe_TheLoai_Today"
+            android:id="@+id/framentchudetheloai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
 </ScrollView>

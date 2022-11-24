@@ -1,11 +1,13 @@
 package exam.lesson.myapplication.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
@@ -14,6 +16,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import exam.lesson.myapplication.Activity.DanhsachbaihatActivity;
 import exam.lesson.myapplication.Model.Quangcao;
 import exam.lesson.myapplication.R;
 
@@ -49,6 +52,16 @@ public class BannerAdapter extends PagerAdapter {
         Picasso.with(context).load(arrayListbanner.get(position).getHinhBaiHat()).into(imgsognbanner);
         txttitlesongbanner.setText(arrayListbanner.get(position).getTenBaiHat());
         txtnoidung.setText(arrayListbanner.get(position).getNoidung());
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DanhsachbaihatActivity.class);
+                intent.putExtra("Banner",arrayListbanner.get(position));
+                context.startActivity(intent);
+            }
+        });{
+
+        };
         container.addView(view);
         return view;
     }
